@@ -1,0 +1,21 @@
+.outerBox {
+  position: fixed;
+  /* left: 10%; */
+  /* top: 0; */
+  margin: 0 auto;
+  background-color: grey;
+  width: 500px;
+  height: 500px;
+}
+
+.innerBox {
+  position: absolute;
+  right: 0;
+  left: 0;
+  /* bottom: -50px; */
+
+  /* top, bottom, left, right */
+  background-color: red;
+  width: 50px;
+  height: 50px;
+}
