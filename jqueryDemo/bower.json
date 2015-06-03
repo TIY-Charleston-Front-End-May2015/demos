@@ -1,0 +1,19 @@
+{
+  "name": "jqueryDemo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/TIY-Charleston-Front-End-May2015/demos",
+  "authors": [
+    "Calvin Webster <calweb@gmail.com>"
+  ],
+  "description": "my jquery demo",
+  "keywords": [
+    "jquery",
+    "demo"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3",
+    "bootstrap": "~3.3.4"
+  }
+}
