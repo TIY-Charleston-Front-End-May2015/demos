@@ -1,3 +1,10 @@
 /* .box {
   background-color: red;
 } */
+
+.page {
+  display: none;
+}
+.active {
+  display: block;
+};

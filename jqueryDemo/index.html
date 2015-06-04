@@ -3,14 +3,30 @@
     <title>My jquery</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+    <script type="html/template" id="postTmpl">
+      <article class='post'>
+        <h3><%= title %></h3>
+        <p><%= content %></p>
+        <blockquote cite='http://calvin.io'>
+        <%= author %></blockquote>
+        <a href='' class='delete'>delete</a>
+      </article>
+    </script>
+    <script type="html/template" id="booTmpl">
+      <ul>
+        <li><%= name %></li>
+      </ul>
+    </script>
   </head>
   <body>
     <header class="navbar">
       <nav class="navbar nav-default">
         <ul class="nav nav-pills">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact </a></li>
+
+          <li><a href="#" rel=".blog">Blog</a></li>
+          <li><a href="#" rel=".about">About</a></li>
+          <li><a href="#" rel=".contact">Contact </a></li>
+          <li><a href="#" rel=".projects">Projects </a></li>
         </ul>
       </nav>
     </header>
@@ -19,17 +35,32 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <h1>My Blog</h1>
-          <input type="text" name="addfour" value="" placeholder="fill in a number please">
-          <div class="total">
-
+          <div class="page blog active">
+            <h1>My Blog</h1>
+            <div class="content">
+              <button type="button" name="charlie">a button</button>
+              <button type="button" name="samantha">a button</button>
+              <button type="button" name="oscar">a button</button>
+              <button type="button" name="simon">a button</button>
+              <button type="button" name="lashay">a button</button>
+              <!-- posts go here -->
+            </div>
           </div>
-          <button type="button" class="addFour" name="button">calc</button>
+        <div class="page about">
+          <h1>Im in the about page</h1>
+          <!-- about content loaded here -->
+        </div>
+        <div class="page contact">
+          email me: calvin@theironyard.com
 
-          <div class="content">
+        </div>
+        <div class="page projects">
+          <h1>Current Projects</h1>
+          <ul>
+            <li>Teaching</li>
+          </ul>
 
-          </div>
-
+        </div>
         </div>
         <div class="col-md-4">
           <h3>My Sidebar</h3>
