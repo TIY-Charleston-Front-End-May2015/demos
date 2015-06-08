@@ -9,6 +9,11 @@ var posts = [
     title: "Kelsey Title",
     author: "Kelsey",
     content: "This is Kelsey's content.....lotsa text here."
+  },
+  {
+    title: "Nathan Title",
+    author: "Nathan",
+    content: "This is Kelsey's content.....lotsa text here."
   }
 ];
 
