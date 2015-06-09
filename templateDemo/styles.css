@@ -1,0 +1,27 @@
+.reddits {
+  margin: 0;
+  padding: 0; }
+
+.reddits li {
+  display: block;
+  clear: both;
+  width: 90%;
+  padding: 25px; }
+
+.reddits li:hover {
+  background-color: #f5f5f5; }
+
+.reddits a {
+  color: black;
+  text-decoration: none; }
+
+li span {
+  font-size: 3em;
+  color: green;
+  float: left;
+  width: 25%; }
+
+li p {
+  float: left;
+  width: 70%;
+  font-size: 1.25em; }
