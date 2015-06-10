@@ -3,20 +3,6 @@
     <title>My jquery</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
-    <script type="html/template" id="postTmpl">
-      <article class='post'>
-        <h3><%= title %></h3>
-        <p><%= content %></p>
-        <blockquote cite='http://calvin.io'>
-        <%= author %></blockquote>
-        <a href='' class='delete'>delete</a>
-      </article>
-    </script>
-    <script type="html/template" id="booTmpl">
-      <ul>
-        <li><%= name %></li>
-      </ul>
-    </script>
   </head>
   <body>
     <header class="navbar">
@@ -44,7 +30,7 @@
           </div>
         <div class="page about">
           <h1>Im in the about page</h1>
-          
+
           <!-- about content loaded here -->
         </div>
         <div class="page contact">
@@ -76,7 +62,7 @@
 
   <script type="text/javascript" src="bower_components/underscore/underscore.js"> </script>
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
-  <script type="text/javascript" src="data.js">
+  <script type="text/javascript" src="templates.js">
   </script>
   <script type="text/javascript" src="refactored.js"></script>
   </body>

@@ -5,6 +5,9 @@
 .page {
   display: none;
 }
+.editing {
+  display: none;
+}
 .active {
   display: block;
-};
+}
