@@ -4,29 +4,37 @@ function Character(options) {
   this.name = options.name;
   this.life = 100;
   this.ability = options.ability || "jump 10ft";
-
-  this.attack = function (villain, weapon) {
-    var chance = Math.floor(Math.random() * 10);
-    if(villain.life <= 0) {
-      console.log(villain.name +" died, you win the game!!");
-    }
-    if(chance > 1) {
-      console.log("strike! you have damaged " + villain.name + " by " + weapon.power);
-      villain.life = villain.life - weapon.power;
-    }
-  };
-
-  this.getWeapon = function (name, type, power) {
-    this.weapon = new Weapon({name: name, type: type, power: power});
-  };
-  this.lazyAttack = function(villain) {
-    if(this.weapon) {
-      this.attack(villain, this.weapon);
-    }
-  };
-
+  this.makeChance();
 
 }
+
+Character.prototype.makeChance = function () {
+  this.chance = Math.floor(Math.random() * 10);
+  return this.chance;
+};
+
+Character.prototype.attack = function (villain, weapon) {
+
+  if(villain.life <= 0) {
+    console.log(villain.name +" died, you win the game!!");
+  }
+  if(this.chance > 1) {
+    console.log("strike! you have damaged " + villain.name + " by " + weapon.power);
+    villain.life = villain.life - weapon.power;
+  }
+};
+
+Character.prototype.getWeapon = function (name, type, power) {
+  this.weapon = new Weapon({name: name, type: type, power: power});
+};
+
+Character.prototype.lazyAttack = function(villain) {
+  if(this.weapon) {
+    this.attack(villain, this.weapon);
+  }
+};
+
+
 
 function Weapon(options) {
 
@@ -47,18 +55,6 @@ var smarf = new Character({name: "Smarf The Impaler", ability: "Impales"});
 var fists = new Weapon({name: "The ol' one-two", type: "human hands", power: 3});
 var sword = new Weapon({name: "Patrick", type: "blade", power: 5});
 var battleRod = new Weapon({name: "Flick", type: "battle rod", power: 10});
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 console.log("Hello Constructors!!");
@@ -95,6 +91,28 @@ function Pet(name, breed) {
   };
 
 }
+
+
+function Dogs() {
+
+}
+
+
+Dogs.prototype = {
+  constructor: Dogs,
+  bark: function () {
+    return "ruff, ruff";
+  },
+  nationality: "Russia"
+
+};
+
+// Dogs.prototype.bark = "USA";
+
+
+
+
+
 
 var mitch = new Person('mitch');
 var barbearIan = new Pet('barbear-ian', 'grizzly bear');
