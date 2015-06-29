@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Models</title>
+  <link rel="stylesheet" href="main.css">
+  <script type="text/template" id="postTmpl">
+
+      <h2><%= title %></h2>
+      <p><%= content %>  - <strong><%= author %></strong></p>
+    <a href="http://google.com" class="add">Add</a>
+  </script>
+</head>
+<body>
+
+  <div id="container">
+<a href="" class="add">add me</a>
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+
+  <script src="model.js"></script>
+  <script src="views.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
