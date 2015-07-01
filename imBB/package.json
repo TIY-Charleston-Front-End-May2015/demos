@@ -16,6 +16,7 @@
   },
   "scripts": {
     "bundle": "node_modules/.bin/watchify js/app.js -o bundled.js -d",
+    "build-sass": "node_modules/.bin/node-sass main.scss > main.css",
     "serve": "node_modules/.bin/serve",
     "watch-css": "node_modules/.bin/node-sass -w main.scss > main.css",
     "start": "npm run bundle & npm run watch-css & npm run serve",
