@@ -7,6 +7,7 @@ var Router = require('./router');
 
 module.exports = $(function () {
   new Router();
+  
   Backbone.history.start();
 
 });

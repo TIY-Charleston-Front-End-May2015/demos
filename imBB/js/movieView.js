@@ -18,12 +18,12 @@ module.exports = Backbone.View.extend({
   },
   template: _.template($('#movieTmpl').html()),
   initialize: function () {
-    console.log('model view create');
+
     this.listenTo(this.model, 'destroy', this.remove);
   },
   delete: function (evt) {
     evt.preventDefault();
-    console.log('in delete method in mod view');
+  
     this.model.destroy();
   },
   remove: function () {

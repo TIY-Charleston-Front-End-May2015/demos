@@ -27,16 +27,16 @@ module.exports = Backbone.Router.extend({
 
   },
   home: function () {
-    console.log('this is the home router');
+
     var collection = new MovieCollection();
 
     collection.fetch().then(function (data) {
-      console.log('here be dataaaaa', data);
+      
         var AppView = new MovieCollectionView({collection: collection});
       var newMovieFormView = new formView({collection: collection, el: '#newMovie'});
     });
   },
   cuteAlert: function () {
-    new formView({el: 'body'})
+    new formView({el: 'body'});
   }
 });

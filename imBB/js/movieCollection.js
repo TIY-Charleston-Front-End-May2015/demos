@@ -7,7 +7,7 @@ module.exports = Backbone.Collection.extend({
   model: MovieModel,
   url:'http://tiy-fee-rest.herokuapp.com/collections/imbb',
   initialize: function () {
-    console.log('collections are awesome!');
+    
   }
 
 
