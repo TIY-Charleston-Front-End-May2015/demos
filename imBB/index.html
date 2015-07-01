@@ -8,14 +8,26 @@
       <h3><%= title %></h3>
       <img src="<%= cover %>" alt="">
       <p><%= plot %></p>
+      <div class="edit-movie">
+        <!-- form goes here -->
+      </div>
+      <a href="" class="trash">DELETE</a> <a href="" class="editing">EDIT</a>
     </script>
     <script type="text/template" id="formTmpl">
       <h3>New Movie</h3>
       <form action="">
-        <input type="text" name="title" placeholder="Title">
-        <input type="text" name="cover">
-        <textarea name="plot" rows="8" cols="40"></textarea>
-        <button type="submit">Add Movie</button>
+        <% if(isNew) { %>
+          <input type="text" name="title" placeholder="Title">
+          <input type="text" name="cover">
+          <textarea name="plot" rows="8" cols="40"></textarea>
+          <button type="submit">Add Movie</button>
+        <% } else { %>
+          <input type="text" name="title" placeholder="Title" value="<%= title %>">
+          <input type="text" name="cover" value="<%= cover %>">
+          <textarea name="plot" rows="8" cols="40"><%= plot %></textarea>
+          <button type="submit">Edit Movie</button>
+        <% } %>
+
       </form>
     </script>
   </head>

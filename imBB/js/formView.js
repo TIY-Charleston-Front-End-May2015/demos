@@ -5,17 +5,22 @@ var _ = require('underscore');
 var MovieModel = require('./movie');
 
 module.exports = Backbone.View.extend({
-  el: '#newMovie',
+  className: 'movieForm',
   template: _.template($('#formTmpl').html()),
-  initialize: function () {
+  initialize: function (options) {
+    this.el = options.el;
+    if(!this.model) {
+      this.model = new MovieModel();
+    }
     this.render();
   },
   events: {
     "submit form": "handleSubmit"
   },
   render: function () {
-    this.model = new MovieModel();
-    var markup = this.template(this.model.toJSON());
+    var myModel = this.model.isNew() ? {} : this.model.toJSON();
+    myModel.isNew = this.model.isNew();
+    var markup = this.template(myModel);
     this.$el.html(markup);
     return this;
   },

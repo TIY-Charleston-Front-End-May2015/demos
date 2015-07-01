@@ -9,7 +9,7 @@ module.exports = Backbone.View.extend({
   initialize: function () {
     console.log('collection view FTW!');
     this.addAll();
-    this.listenTo(this.collection, 'change', this.reload);
+    this.listenTo(this.collection, 'update', this.reload);
   },
   reload: function () {
     this.$el.html('');

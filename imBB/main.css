@@ -8,3 +8,10 @@ section {
 aside {
   width: 30%;
 }
+
+.edit-movie {
+  display: none;
+}
+.active {
+  display: block;
+}
