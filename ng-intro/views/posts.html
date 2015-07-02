@@ -1,0 +1,9 @@
+<a href="#/new">Create Post</a>
+
+  <article ng-repeat="post in posts">
+      <h3>{{post.title}}</h3>
+      <p>
+        {{post.content}}
+      </p>
+      <a href="#/posts/{{post._id}}">Detail</a> | <button type="button" name="button" ng-click="deletePost(post._id)">Delete</button>
+  </article>
