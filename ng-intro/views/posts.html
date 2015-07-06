@@ -1,9 +1,20 @@
+<div ng-controller="MoneyController">
+  <input type="text" ng-model="search.fullName" name="name" value="">
+  <ul>
+
+  <li ng-repeat="p in peeps | filter: search:strict">
+    <p>
+      {{p.fullName}} - <img ng-src="{{p.avatar}}" alt="" />
+    </p>
+  </li>
+  </ul>
+</div>
 <a href="#/new">Create Post</a>
 
-  <article ng-repeat="post in posts">
-      <h3>{{post.title}}</h3>
+  <article ng-repeat="p in posts">
+      <h3>{{p.title}}</h3>
       <p>
-        {{post.content}}
+        {{p.content}}
       </p>
-      <a href="#/posts/{{post._id}}">Detail</a> | <button type="button" name="button" ng-click="deletePost(post._id)">Delete</button>
+      <a href="#/posts/{{p._id}}">Detail</a> | <button type="button" name="button" ng-click="deletePost(p._id)">Delete</button>
   </article>
