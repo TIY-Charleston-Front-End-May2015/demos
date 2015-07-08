@@ -5,20 +5,15 @@
     .module('instaflickr', [
       'ngRoute',
       'underscore',
-      'moment'
+      'moment',
+      'photos',
+      'likes',
+      'posts'
     ])
     .config(function ($routeProvider) {
       $routeProvider
         .when('/', {
           templateUrl: 'views/main.html',
-          controller: 'MainController'
-        })
-        .when('/myLikes', {
-          templateUrl: 'views/myLikes.html',
-          controller: 'LikesController'
-        })
-        .when('/detail/:photoId', {
-          templateUrl: 'views/detail.html',
           controller: 'MainController'
         })
         .when('/404', {

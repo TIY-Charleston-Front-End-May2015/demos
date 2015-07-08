@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body ng-app="instaflickr">
+    <nav>
+      <div class="topNav">
+        <a href="#/" class="brand">flickrgram</a>
+        <div class="menuItems">
+          <a href="#/likes">My Likes</a>
+          <a href="#/photos">Photos</a>
+        </div>
+      </div>
+    </nav>
 
     <ng-view></ng-view>
 
@@ -19,6 +28,22 @@
 <script src="js/app.js" charset="utf-8"></script>
 <script src="js/controllers.js" charset="utf-8"></script>
 <script src="js/services.js" charset="utf-8"></script>
+
+<!-- photo module -->
+<script src="photos/photos.module.js" charset="utf-8"></script>
+<script src="photos/photos.controller.js" charset="utf-8"></script>
+<script src="photos/photos.service.js" charset="utf-8"></script>
+
+<!-- likes module -->
+<script src="likes/likes.module.js" charset="utf-8"></script>
+<script src="likes/likes.controller.js" charset="utf-8"></script>
+<script src="likes/likes.service.js" charset="utf-8"></script>
+
+<!-- posts module -->
+<script src="posts/posts.js" charset="utf-8"></script>
+<script src="posts/postsController.js" charset="utf-8"></script>
+<script src="posts/postsService.js" charset="utf-8"></script>
+
 
   </body>
 </html>

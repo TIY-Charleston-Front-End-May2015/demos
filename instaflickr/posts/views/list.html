@@ -1,0 +1,8 @@
+<a href="#/posts/new" class="btn btn-success">Create New Post</a>
+<input type="text" ng-model="query">{{query}}
+<button data-ng-click="calvin = !calvin">toggle posts</button>
+<section data-ng-show="calvin" data-ng-repeat="post in postsCtl.posts | filter: query">
+    <h2>{{post.title}}</h2>
+    <p>{{post.content}}</p>
+    <a href="#/posts/{{post._id}}">view more</a>
+</section>
