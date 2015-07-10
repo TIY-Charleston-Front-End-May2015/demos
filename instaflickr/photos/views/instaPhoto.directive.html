@@ -1,0 +1,16 @@
+<h1>{{extra}} {{extra}} {{extra}} {{extra}}{{extra}}{{extra}}</h1>
+<article class="photo" data-id="{{p.id}}">
+  <header>
+    <img src="http://www.fillmurray.com/50/50" alt="" />
+    <div class="">
+      <a href="#/photos/{{p.id}}">{{p.title}}</a>
+    </div>
+    <a href="#">{{p.dt}}</a>
+  </header>
+  <div class="pContain">
+      <img ng-src="{{p.image}}" alt="" />
+      <div class="like" ng-controller="LikesController as likesCtrl">
+        <span ng-click="likesCtrl.addLike(photo)">&#9825;</span>
+      </div>
+  </div>
+</article>

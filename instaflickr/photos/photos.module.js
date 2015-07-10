@@ -8,11 +8,13 @@
       $routeProvider
         .when('/photos', {
           templateUrl: 'photos/views/list.html',
-          controller: 'PhotoController'
+          controller: 'PhotoController',
+          controllerAs: 'photoCtrl'
         })
         .when('/photos/:photoId', {
           templateUrl: 'photos/views/detail.html',
-          controller: 'PhotoController'
+          controller: 'PhotoController',
+          controllerAs: 'photoCtrl'
         });
     });
 })();

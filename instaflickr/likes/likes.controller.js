@@ -3,14 +3,14 @@
   angular
     .module('likes')
     .controller('LikesController', function ($scope, LikesService, $location) {
-
+      var vm = this;
     if($location.url() === '/likes') {
       LikesService.getLikes().success(function (likes) {
-        $scope.likes = likes;
+        vm.likes = likes;
       });
     }
 
-      $scope.addLike = function (photo) {
+      vm.addLike = function (photo) {
         LikesService.addLike(photo);
       };
 

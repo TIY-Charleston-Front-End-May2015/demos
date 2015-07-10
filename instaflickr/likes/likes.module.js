@@ -8,7 +8,8 @@
       $routeProvider
         .when('/likes', {
           templateUrl: 'likes/views/list.html',
-          controller: 'LikesController'
+          controller: 'LikesController',
+          controllerAs: 'likesCtrl'
         });
     });
 
