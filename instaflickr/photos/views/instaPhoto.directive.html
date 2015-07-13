@@ -1,7 +1,7 @@
-<h1>{{extra}} {{extra}} {{extra}} {{extra}}{{extra}}{{extra}}</h1>
 <article class="photo" data-id="{{p.id}}">
-  <header>
+  <header ng-mouseover="action2()">
     <img src="http://www.fillmurray.com/50/50" alt="" />
+
     <div class="">
       <a href="#/photos/{{p.id}}">{{p.title}}</a>
     </div>
@@ -9,8 +9,12 @@
   </header>
   <div class="pContain">
       <img ng-src="{{p.image}}" alt="" />
-      <div class="like" ng-controller="LikesController as likesCtrl">
-        <span ng-click="likesCtrl.addLike(photo)">&#9825;</span>
+      <img ng-src="{{url}}" alt="" />
+      <div class="like">
+        <span ng-click="action()">&#9825;</span>
       </div>
+  </div>
+  <div class="extraStuff" ng-transclude>
+
   </div>
 </article>

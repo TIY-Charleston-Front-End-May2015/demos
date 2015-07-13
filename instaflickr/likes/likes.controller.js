@@ -13,6 +13,9 @@
       vm.addLike = function (photo) {
         LikesService.addLike(photo);
       };
+      vm.justAlertMe = function (string) {
+        alert(string);
+      };
 
 
     });

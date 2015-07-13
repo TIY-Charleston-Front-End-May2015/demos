@@ -189,3 +189,7 @@ nav .topNav {
     background: #FFF;
 
   }
+
+  .grow {
+    transform: scale(2);
+  }

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="photos">
-    <insta-photo ng-repeat="photo in likesCtrl.likes" p="photo" extra="test"></insta-photo>
+    <insta-photo ng-repeat="photo in likesCtrl.likes" p="photo" action="likesCtrl.justAlertMe(photo.title)"></insta-photo>
 
   </div>
 </div>

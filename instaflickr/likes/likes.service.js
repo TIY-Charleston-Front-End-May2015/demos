@@ -3,7 +3,7 @@
   angular
     .module('likes')
     .factory('LikesService', function ($http, $q, $cacheFactory) {
-      var url = 'http://tiy-fee-rest.herokuapp.com/collections/instaflickr';
+      var url = 'http://tiy-fee-rest.herokuapp.com/collections/flickagram';
       var addLike = function (photo) {
         $http.post(url, photo).success(function (resp) {
 

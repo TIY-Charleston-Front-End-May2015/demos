@@ -1,6 +1,7 @@
 
 <div class="container">
   <div class="photos">
-    <insta-photo ng-repeat="photo in photoCtrl.photos" p="photo" ></insta-photo>
+
+    <insta-photo ng-repeat="photo in photoCtrl.photos" p="photo" action="addLike(photo)" action2="logStuff(photo.title)" data-id="{{photo.id}}" data-calvin="{{photo.image}}"></insta-photo>
   </div>
 </div>
